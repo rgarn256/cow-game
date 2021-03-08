@@ -1,0 +1,208 @@
+
+body {
+  text-align: center;
+  margin: 50px 0 0 0 !important;
+}
+
+canvas {
+    border:1px solid #d3d3d3;
+    background: url("images/cow-background.svg") center no-repeat;
+    background-size: cover;
+  	height: 50vh; 
+  	width: 50vw;
+}
+
+/* COW STYLES */
+.cowBodyPixel {
+  background: url("images/cow-head-black.svg") center no-repeat;
+}
+
+img{
+	display: none;
+	width: 100%;
+	height: 100%;
+}
+
+.buttonContainer {
+	position: relative;
+	padding-top: 20px;
+}
+
+.button{
+	display: inline-block;
+}
+
+.playButton, .patternButton{
+	position: absolute;
+	left: 0;
+}
+
+.playButton{
+	top: 0;
+}
+
+.patternButton{
+	top: 10%;
+}
+
+.moveButton{
+	position: relative;
+}
+
+.themeButton{
+  display: inline-block;
+  font-size: 18px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #258d79;
+  border: 2px solid #258d79;
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 8px 20px;
+  transition: all .35s;
+  margin: 15px;
+  cursor: pointer;
+}
+
+.themeButton span{
+  position: relative;
+  z-index: 2;
+}
+
+.themeButton:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #258d79;
+  transition: all .35s;
+}
+
+.themeButton:hover{
+  color: #fff;
+}
+
+.themeButton:hover:after{
+  width: 100%;
+}
+
+#feedback {
+	max-width: 250px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.feedbackContainer{
+	position: absolute;
+    top: 22%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px !important;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  transition: all .35s;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+footer {
+	margin-top: 30px;
+    padding: 30px;
+    background: #258d79;
+    color: #fff;
+
+}
+
+footer a{
+    color: #fff;
+
+}
+
+@media only screen and (max-width: 768px) {
+  /* MOBILE */
+	.playButton, .patternButton{
+		position: relative;
+		top: 0;
+	}
+	canvas {
+	  	height: 80vh; 
+	  	width: 80vw;
+	}
+
+	#feedback {
+		max-width: 100%;
+	}
+
+	.feedbackContainer{
+		position: relative;
+	    top: 0;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+  /* MOBILE */
+	.playButton, .patternButton{
+		position: relative;
+		top: 0;
+	}
+	canvas {
+	  	height: 80vh; 
+	  	width: 80vw;
+	}
+
+	#feedback {
+		max-width: 100%;
+	}
+
+	.feedbackContainer{
+		position: relative;
+	    top: 0;
+	}
+}
